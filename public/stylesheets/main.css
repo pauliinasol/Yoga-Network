@@ -1,0 +1,36 @@
+#whole-header {
+  border-top: 1px solid black;
+  background-image: url(http://oneseapullzone.oneseabody.netdna-cdn.com/wp-content/uploads/2016/02/Exercise.jpg);
+}
+
+#navbar {
+  padding: 0px;
+  margin: 0px;
+}
+
+#about {
+  background-color: #C9AD8D;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+
+.header-content-inner {
+  padding: 30px;
+}
+
+#button1 {
+    border-color: #fff;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+#button1:hover {
+   background-color: silver}
