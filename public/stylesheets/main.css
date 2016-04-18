@@ -3,6 +3,13 @@
   background-image: url(http://oneseapullzone.oneseabody.netdna-cdn.com/wp-content/uploads/2016/02/Exercise.jpg);
 }
 
+#middle {
+  border-top: 1px solid black;
+  height: 100px;
+  background-color: white;
+  width: 100%;
+}
+
 #navbar {
   padding: 0px;
   margin: 0px;

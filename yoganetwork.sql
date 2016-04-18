@@ -35,6 +35,12 @@ CREATE TABLE admins (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR (200),
   image_url VARCHAR (500),
-  suburb VARCHAR (100)
-  favourite_yoga VARCHAR (500)
+  password_digest VARCHAR (400) NOT NULL
+);
+
+
+CREATE TABLE users (
+  id SERIAL4 PRIMARY KEY,
+  email VARCHAR(50) NOT NULL,
+  password_digest VARCHAR (400) NOT NULL
 );
