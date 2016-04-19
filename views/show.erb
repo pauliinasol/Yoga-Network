@@ -1,0 +1,28 @@
+
+<body style="background-color: #E5D4C0">
+
+  <form action="/studios/new">
+    <p><button type="submit" class="btn btn-default" id="addyourstudio">Add your studio</button></p>
+  </form>
+
+<div id="showarea">
+<div class="container">
+          <div class="row">
+              <div class="col-lg-6 col-lg-offset-3 text-center">
+
+
+<p id="yogaheader">All yoga studios:</p>
+
+<% @studios.each do |studio| %>
+  <p id="studioname"><%= studio.name %></p>
+  <p><%= studio.suburb %></p>
+  <p><%= studio.body %></p>
+  <p><img src="<%= studio.image_url %> " id="studioimages"></p>
+  <p style="border-bottom: 1px dashed black">
+<% end %>
+
+</div>
+</div>
+</div>
+</div>
+</body>

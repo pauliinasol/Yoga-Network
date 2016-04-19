@@ -6,8 +6,8 @@ CREATE TABLE studios (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR (200),
   image_url VARCHAR (500),
-  suburb VARCHAR (100)
-  style VARCHAR (1000)
+  suburb VARCHAR (200),
+  body VARCHAR (1000)
 );
 
 SELECT * FROM studios;
@@ -31,16 +31,9 @@ CREATE TABLE yoga_styles (
 );
 
 
-CREATE TABLE admins (
-  id SERIAL4 PRIMARY KEY,
-  name VARCHAR (200),
-  image_url VARCHAR (500),
-  password_digest VARCHAR (400) NOT NULL
-);
-
-
 CREATE TABLE users (
   id SERIAL4 PRIMARY KEY,
   email VARCHAR(50) NOT NULL,
-  password_digest VARCHAR (400) NOT NULL
+  password_digest VARCHAR (400) NOT NULL,
+  admin BOOLEAN NOT NULL
 );

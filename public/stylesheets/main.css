@@ -10,24 +10,80 @@
   width: 100%;
 }
 
+#studioimages {
+  width: 400px;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid black;
+}
+
 #navbar {
   padding: 0px;
   margin: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#studioname {
+  font-weight: bold;
+}
+
+#yogaheader {
+  font-size: 2em;
+  padding: 10px;
+  font-weight: bold;
 }
 
 #about {
-  background-color: #C9AD8D;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #E5D4C0;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  color: black;
+}
+
+#addyourstudio {
+  margin-top: 70px;
+  margin-left: 30px;
 }
 
 .container-fluid {
   background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.text-faded {
+  color: black;
+}
+
+#text-faded-desc {
+  color: black;
+}
+
+#signup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #F3E9DE;
+}
+
+#signupbutton {
+  text-align: center;
 }
 
 
 .header-content-inner {
   padding: 30px;
+}
+
+#section-heading-info {
+  padding-top: 30px;
 }
 
 #button1 {
