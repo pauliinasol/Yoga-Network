@@ -5,6 +5,7 @@
     <p><button type="submit" class="btn btn-default" id="addyourstudio">Add your studio</button></p>
   </form>
 
+
 <div id="showarea">
 <div class="container">
           <div class="row">
@@ -15,11 +16,18 @@
 
 <% @studios.each do |studio| %>
   <p id="studioname"><%= studio.name %></p>
-  <p><%= studio.suburb %></p>
+  <p>
+    <form method="get" action="/studios/<%= studio.id %>">
+      <button class="btn btn-default" type="submit">More information</button>
+    </form>
+  </p>
+  <p><%= studio.address %></p>
   <p><%= studio.body %></p>
+  <p><a href="<%= studio.website_url %>" target="_blank">Website</a></p>
   <p><img src="<%= studio.image_url %> " id="studioimages"></p>
   <p style="border-bottom: 1px dashed black">
 <% end %>
+
 
 </div>
 </div>

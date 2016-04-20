@@ -10,6 +10,21 @@
   width: 100%;
 }
 
+#studiodetailinfo {
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+#loginbackground {
+  background-image: url(http://kameronbrothers.com/wp-content/uploads/2016/02/sunset-beach-yoga.jpg);
+}
+
+#loginbackground2 {
+background-image: url(http://yogaposeweekly.letsglo.com/wp-content/uploads/2013/05/IMG_8047.jpg);
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+
 #studioimages {
   width: 400px;
   text-align: center;
@@ -31,6 +46,12 @@
 }
 
 #yogaheader {
+  font-size: 2em;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.headers {
   font-size: 2em;
   padding: 10px;
   font-weight: bold;
@@ -63,6 +84,28 @@
   color: black;
 }
 
+#login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logintext {
+  padding: 20px;
+  font-weight: bold;
+}
+
+#like {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#signupshit {
+  margin-top: 100px;
+}
+
 #signup {
   position: fixed;
   top: 50%;
@@ -71,6 +114,7 @@
   border: 1px solid black;
   padding: 20px;
   background-color: #F3E9DE;
+  opacity: 0.7;
 }
 
 #signupbutton {

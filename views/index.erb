@@ -3,10 +3,13 @@
       <header id="whole-header">
           <div class="header-content">
               <div class="header-content-inner" style="background-color: rgba(0, 0, 0, .5)">
+
                   <h1>Melbourne Yoga Network</h1>
+                  <% if logged_in? %><hr>
+                  <p>Welcome <%= current_user.username %></p>  <% end %>
                   <hr>
-                  <p> This page connects you to all the yoga studios in Melbourne based on your favourite style and atmosphere!</p>
-                  <a href="#about" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a>
+                  <p> Connects you with all your favourite yoga studios in Melbourne.</p>
+                  <a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a>
               </div>
           </div>
       </header>
@@ -15,8 +18,6 @@
 
       </p>
 
-
-
       <section class="bg-primary" id="about">
           <div class="container">
               <div class="row">
@@ -24,8 +25,8 @@
                       <h2 class="section-heading">Spoiled by choice? We'll help you choose!</h2>
                       <hr class="light">
                       <p class="yogaimage"><img src="http://media2.popsugar-assets.com/files/2014/04/24/153/n/28443503/bc3ac4e0b648e66f_One-Hot-Yoga-06_Yoga-Poses_Yoga-Melbourne-765x560.xxxlarge/i/Best-Yoga-Studios-Melbourne.jpg" width="500"></p>
-                      <p class="text-faded">Melbourne's yoga scene is blooming - there are new studios joining the community every day. We understand it is hard to keep up and therefore we have done the hard work for you. Let it be different class types or teacher training, by joining us you will get a whole picture and tips from the insiders of Melbourne's yoga community. Don't forget to add your studio!</p>
-                      <a href="#" class="btn btn-default btn-xl">Start exploring</a>
+                      <p class="text-faded" id="text-faded-desc">Melbourne's yoga scene is blooming - there are new studios joining the community every day. We understand it is hard to keep up and therefore we have done the hard work for you. Let it be different class types or teacher training, by joining us you will get a whole picture and tips from the insiders of Melbourne's yoga community. Don't forget to add your studio!</p>
+                      <a href="/new" class="btn btn-default btn-xl">Add your studio</a>
                   </div>
               </div>
           </div>

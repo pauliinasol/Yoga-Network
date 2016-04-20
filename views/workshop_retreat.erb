@@ -1,0 +1,31 @@
+
+<body style="background-color: #E5D4C0">
+
+  <form action="/studios/new">
+    <p><button type="submit" class="btn btn-default" id="addyourstudio">Add your studio</button></p>
+  </form>
+
+<div id="showarea">
+<div class="container">
+          <div class="row">
+
+
+
+<p id="yogaheader">All yoga studios:</p>
+
+<% @retreats.each do |retreat| %>
+  <p id="studioname"><%= studio.name %></p>
+  <div class="col-lg-6 col-lg-offset-3 text-center">
+  <p><%= retreat.studio %></p>
+  <p><%= retreat.location %></p>
+  <p><a href="<%= retreat.website_url %>">Website</a></p>
+  <p><img src="<%= retreat.image_url %> " id="studioimages"></p>
+  <p style="border-bottom: 1px dashed black">
+  </div>
+<% end %>
+
+
+</div>
+</div>
+</div>
+</body>

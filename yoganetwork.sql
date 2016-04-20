@@ -6,8 +6,9 @@ CREATE TABLE studios (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR (200),
   image_url VARCHAR (500),
-  suburb VARCHAR (200),
-  body VARCHAR (1000)
+  address VARCHAR (500),
+  body VARCHAR (1000),
+  website_url VARCHAR (500)
 );
 
 SELECT * FROM studios;
@@ -22,18 +23,31 @@ CREATE TABLE yogis (
   favourite_yoga VARCHAR (500)
 );
 
-
-CREATE TABLE yoga_styles (
+CREATE TABLE yogastyles (
   id SERIAL4 PRIMARY KEY,
-  yoga VARCHAR (200),
-  level VARCHAR (100)
-  mood VARCHAR (500)
+  yoga_style VARCHAR(200) NOT NULL
 );
-
 
 CREATE TABLE users (
   id SERIAL4 PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
-  password_digest VARCHAR (400) NOT NULL,
+  homestudio VARCHAR(200),
+  favourite_yoga VARCHAR(400),
+  password_digest VARCHAR (400) NOT NULL
+);
+
   admin BOOLEAN NOT NULL
+
+CREATE TABLE likes (
+  id SERIAL4 PRIMARY KEY,
+  user_id INTEGER,
+  studio_id INTEGER
+);
+
+CREATE TABLE comments (
+  id SERIAL4 PRIMARY KEY,
+  body VARCHAR (800) NOT NULL,
+  user_id INTEGER
+  studio_id INTEGER
 );
