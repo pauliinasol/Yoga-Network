@@ -12,6 +12,11 @@
     <p><%= like.studio.body %></p>
     <p><a href="<%= like.studio.website_url %>" target="_blank">Website</a></p>
     <p><img src="<%= like.studio.image_url %> " id="studioimages"></p>
-    <p><button class="btn btn-default">Unlike</button>
+    <p>
+      <form action="/likes/<%= like.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button class="btn btn-default">Unlike</button>
+      </form>
+    </p>
     <p style="border-bottom: 1px dashed black">
   <% end %>

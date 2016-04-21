@@ -128,3 +128,11 @@ post '/like/:studio_id' do
   like.save
   redirect to "/studios/#{ params[:studio_id] }"
 end
+
+delete '/likes/:id' do
+  like = Like.find(params[:id])
+  studio_id = like.studio_id
+  like.delete
+  like.save
+  redirect to "/favourites"
+end
