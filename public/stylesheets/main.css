@@ -10,9 +10,29 @@
   width: 100%;
 }
 
+#yogastudioinfo {
+  position: fixed;
+}
+
+#commentssection {
+  max-height: 200px;
+  margin-top: 30px;
+}
+
+#commentbox {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.7;
+  width: 100%;
+}
+.comment-box-text-align{
+  margin-left: auto;
+}
+
 #studiodetailinfo {
-  margin-top: 80px;
-  margin-left: 50px;
+  margin-top: 45px;
+  vertical-align: top;
 }
 
 #loginbackground {
@@ -41,6 +61,14 @@ background-size: 100% 100%;
   z-index: 100;
 }
 
+#welcome {
+  margin-bottom: 10px;
+}
+
+#services {
+  border-bottom: 1px solid black;
+}
+
 #studioname {
   font-weight: bold;
 }
@@ -49,6 +77,10 @@ background-size: 100% 100%;
   font-size: 2em;
   padding: 10px;
   font-weight: bold;
+}
+
+#likes {
+  margin-top: 60px;
 }
 
 .headers {
@@ -140,4 +172,21 @@ background-size: 100% 100%;
 }
 
 #button1:hover {
-   background-color: silver}
+   background-color: silver;
+ }
+
+#contact {
+    background-color: #E5D4C0;
+}
+
+
+#services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.service-box-hover:hover {
+   background: #F1DAE2;
+   border-radius: 10px;
+   transition: 1s;
+}

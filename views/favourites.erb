@@ -1,0 +1,17 @@
+
+<body style="background-color: #E5D4C0">
+
+<div id="likes" class="col-sm-12">
+
+
+  <p class="headers" style="text-align: inherit">Your favourite studios:</p>
+  <div class="col-sm-6">
+  <% @likes.each do |like| %>
+    <p id="studioname"><%= like.studio.name %></p>
+    <p><%= like.studio.address %></p>
+    <p><%= like.studio.body %></p>
+    <p><a href="<%= like.studio.website_url %>" target="_blank">Website</a></p>
+    <p><img src="<%= like.studio.image_url %> " id="studioimages"></p>
+    <p><button class="btn btn-default">Unlike</button>
+    <p style="border-bottom: 1px dashed black">
+  <% end %>

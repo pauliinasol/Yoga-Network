@@ -1,2 +1,4 @@
-class Comments < ActiveRecord::Base
+class Comment < ActiveRecord::Base
+  belongs_to :studio
+  belongs_to :user
 end

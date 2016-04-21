@@ -6,6 +6,8 @@ require './db_config'
 require 'active_record'
 require './models/studio'
 require './models/user'
+require './models/comment'
+require './models/like'
 
 enable :sessions
 
@@ -37,6 +39,11 @@ end
 
 get '/new' do
   erb :new
+end
+
+get '/favourites' do
+  @likes = Like.where(user_id: current_user.id)
+  erb :favourites
 end
 
 get '/signup' do
@@ -99,5 +106,25 @@ end
 
 get '/studios/:id' do
   @studios = Studio.find_by(id: params[:id])
+  @like = Like.find_by(user_id: current_user.id, studio_id: params[:id].to_i)
+  @comments = @studios.comments
   erb :studiodetails
+end
+
+post '/studios/:id/comments' do
+  user = User.find_by(id: params[:id])
+  comment = Comment.new
+  comment.body = params[:body]
+  comment.studio_id = params[:studio_id]
+  comment.user_id = current_user.id
+  comment.save
+  redirect to "/studios/#{ params[:studio_id] }"
+end
+
+post '/like/:studio_id' do
+  like = Like.new
+  like.user_id = current_user.id
+  like.studio_id = params[:studio_id]
+  like.save
+  redirect to "/studios/#{ params[:studio_id] }"
 end

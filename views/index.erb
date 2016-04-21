@@ -5,8 +5,9 @@
               <div class="header-content-inner" style="background-color: rgba(0, 0, 0, .5)">
 
                   <h1>Melbourne Yoga Network</h1>
-                  <% if logged_in? %><hr>
-                  <p>Welcome <%= current_user.username %></p>  <% end %>
+                  <% if logged_in? %>
+                  <hr>
+                  <p id="welcome">Welcome <%= current_user.username %>   <% end %></p>
                   <hr>
                   <p> Connects you with all your favourite yoga studios in Melbourne.</p>
                   <a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a>
@@ -31,6 +32,52 @@
               </div>
           </div>
       </section>
+
+
+          <section id="services">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12 text-center">
+                          <h2 class="section-heading">At Your Service</h2>
+                          <img src="http://prama.org/wp-content/uploads/2015/09/yogalady1.png" width="500px">
+                          <hr class="primary">
+                      </div>
+                  </div>
+              </div>
+              <div class="container" id="aboutus">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-6 text-center service-box-hover">
+                          <div class="service-box">
+
+                              <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                              <h3>Find the community</h3>
+                              <p class="text-muted">Connect with your fellow yogis in Melbourne.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 text-center service-box-hover">
+                          <div class="service-box">
+                              <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                              <h3>Share your stories</h3>
+                              <p class="text-muted">Comment studios you visit or add your studio.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 text-center service-box-hover">
+                          <div class="service-box">
+                              <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                              <h3>Save your favourites</h3>
+                              <p class="text-muted">Keep up to date with your favourite studio list.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 text-center service-box-hover">
+                          <div class="service-box">
+                              <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                              <h3>Made with Love</h3>
+                              <p class="text-muted">We love yoga too! That's why our passion is so strong.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
       <section id="contact">
           <div class="container">
