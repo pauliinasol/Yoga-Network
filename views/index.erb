@@ -4,20 +4,19 @@
           <div class="header-content">
               <div class="header-content-inner" style="background-color: rgba(0, 0, 0, .5)">
 
-                  <h1>Melbourne Yoga Network</h1>
+                  <h1>Yoga Network</h1>
                   <% if logged_in? %>
                   <hr>
                   <p id="welcome">Welcome <%= current_user.username %>   <% end %></p>
                   <hr>
-                  <p> Connects you with all your favourite yoga studios in Melbourne.</p>
-                  <a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a>
+                  <p> Connects you with your favourite yoga studios in Melbourne.</p>
+                  <% if !logged_in? %><a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a><% end %>
               </div>
           </div>
       </header>
 
-      <p id="middle">
 
-      </p>
+
 
       <section class="bg-primary" id="about">
           <div class="container">
@@ -25,7 +24,7 @@
                   <div class="col-lg-8 col-lg-offset-2 text-center">
                       <h2 class="section-heading">Spoiled by choice? We'll help you choose!</h2>
                       <hr class="light">
-                      <p class="yogaimage"><img src="http://media2.popsugar-assets.com/files/2014/04/24/153/n/28443503/bc3ac4e0b648e66f_One-Hot-Yoga-06_Yoga-Poses_Yoga-Melbourne-765x560.xxxlarge/i/Best-Yoga-Studios-Melbourne.jpg" width="500"></p>
+
                       <p class="text-faded" id="text-faded-desc">Melbourne's yoga scene is blooming - there are new studios joining the community every day. We understand it is hard to keep up and therefore we have done the hard work for you. Let it be different class types or teacher training, by joining us you will get a whole picture and tips from the insiders of Melbourne's yoga community. Don't forget to add your studio!</p>
                       <a href="/new" class="btn btn-default btn-xl">Add your studio</a>
                   </div>
@@ -33,13 +32,16 @@
           </div>
       </section>
 
+      <div class="parallax-window" data-parallax="scroll" data-image-src="http://anandamarga.org.sg/wp-content/uploads/2009/08/Yoga-Studio-Guelph-2.jpg"></div>
+
+
 
           <section id="services">
               <div class="container">
                   <div class="row">
                       <div class="col-lg-12 text-center">
                           <h2 class="section-heading">At Your Service</h2>
-                          <img src="http://prama.org/wp-content/uploads/2015/09/yogalady1.png" width="500px">
+
                           <hr class="primary">
                       </div>
                   </div>
@@ -65,7 +67,7 @@
                           <div class="service-box">
                               <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
                               <h3>Save your favourites</h3>
-                              <p class="text-muted">Keep up to date with your favourite studio list.</p>
+                              <p class="text-muted">Keep up to date with your favourite studios.</p>
                           </div>
                       </div>
                       <div class="col-lg-3 col-md-6 text-center service-box-hover">
@@ -78,6 +80,8 @@
                   </div>
               </div>
           </section>
+</div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="http://yoga.ooreka.fr/img/intro/intro-yoga.jpg"></div>
 
       <section id="contact">
           <div class="container">
@@ -98,3 +102,4 @@
               </div>
           </div>
       </section>
+</div>

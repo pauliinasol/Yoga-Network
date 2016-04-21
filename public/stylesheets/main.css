@@ -5,10 +5,14 @@
 
 #middle {
   border-top: 1px solid black;
-  height: 100px;
+  height: 150px;
   background-color: white;
   width: 100%;
+  border-bottom: 1px solid black;
+  margin-bottom: 0px;
 }
+
+
 
 #yogastudioinfo {
   position: fixed;
@@ -52,6 +56,11 @@ background-size: 100% 100%;
   border: 1px solid black;
 }
 
+.headersdetails {
+  margin-top: 30px;
+  margin-left: -10px;
+}
+
 #navbar {
   padding: 0px;
   margin: 0px;
@@ -65,8 +74,12 @@ background-size: 100% 100%;
   margin-bottom: 10px;
 }
 
+
 #services {
   border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 #studioname {
@@ -177,16 +190,16 @@ background-size: 100% 100%;
 
 #contact {
     background-color: #E5D4C0;
+    border-top: 1px solid black;
 }
 
-
-#services {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.parallax-window {
+    min-height: 300px;
+    background: transparent;
 }
 
 .service-box-hover:hover {
-   background: #F1DAE2;
+   background: #E5D4C0;
    border-radius: 10px;
    transition: 1s;
 }
