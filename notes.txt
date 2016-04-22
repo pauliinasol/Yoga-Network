@@ -4,3 +4,23 @@
   </div>
   <button type="submit" class="btn btn-default">Search</button>
 </form>
+
+
+// Highlight the top nav as scrolling occurs
+$('body').scrollspy({
+    target: '.navbar-fixed-top',
+    offset: 51
+});
+
+$("h1").fitText(
+    1.2, {
+        minFontSize: '35px',
+        maxFontSize: '65px'
+    }
+);
+
+$('#mainNav').affix({
+    offset: {
+        top: 100
+    }
+});
