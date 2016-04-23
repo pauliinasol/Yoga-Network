@@ -48,6 +48,6 @@ CREATE TABLE likes (
 CREATE TABLE comments (
   id SERIAL4 PRIMARY KEY,
   body VARCHAR (800) NOT NULL,
-  user_id INTEGER
+  user_id INTEGER,
   studio_id INTEGER
 );
