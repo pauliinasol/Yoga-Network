@@ -12,7 +12,9 @@
   margin-bottom: 0px;
 }
 
-
+#body {
+  text-align: justify;
+}
 
 #yogastudioinfo {
   position: fixed;

@@ -3,13 +3,10 @@
 
 <p>
   <form action="/studios/new">
-    <p><button type="submit" class="btn btn-default" id="addyourstudio">Add your studio</button>
+    <p><button type="submit" class="btn btn-default" id="addyourstudio">Add your studio</button></p>
   </form>
 
 
-
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
       <li class="dropdown">
         <button type="submit" class="btn btn-default" style="margin-left: 15px" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by <span class="caret"></span> </button>
         <ul class="dropdown-menu">
@@ -29,14 +26,12 @@
       </li>
     </ul>
   </p>
-</p>
-
-<div id="showarea">
-<div class="container">
-          <div class="row">
-              <div class="col-lg-6 col-lg-offset-3 text-center">
 
 
+
+  
+
+<div id="commentssection" class="col-md-6 text-left">
 <p id="yogaheader" style="text-align: inherit">All yoga studios:</p>
 
 <% @studios.each do |studio| %>
@@ -47,15 +42,17 @@
     </form>
   </p>
   <p><%= studio.address %></p>
-  <p><%= studio.body %></p>
+  <p id="body"><%= studio.body %></p>
   <p><a href="<%= studio.website_url %>" target="_blank">Website</a></p>
   <p><img src="<%= studio.image_url %> " id="studioimages"></p>
   <p style="border-bottom: 1px dashed black">
+
 <% end %>
+  </div>
 
 
-</div>
-</div>
-</div>
-</div>
+  <div id="commentssection2" class="col-md-6 text-left">
+
+  </div>
+
 </body>
