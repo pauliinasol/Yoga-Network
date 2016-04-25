@@ -5,15 +5,30 @@
 
 #middle {
   border-top: 1px solid black;
-  height: 150px;
+  height: 100px;
   background-color: white;
   width: 100%;
-  border-bottom: 1px solid black;
-  margin-bottom: 0px;
 }
 
-#body {
-  text-align: justify;
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  perspective-origin-x: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+   transform: translateZ(-1px) scale(2);
 }
 
 #yogastudioinfo {
@@ -52,7 +67,7 @@ background-size: 100% 100%;
 }
 
 #studioimages {
-  width: 430px;
+  width: 400px;
   text-align: center;
   margin: 20px;
   border: 1px solid black;
@@ -71,17 +86,8 @@ background-size: 100% 100%;
   margin-bottom: 10px;
 }
 
-#studio {
-  background-color: white;
-  padding: 20px;
-  border: 1px solid black;
-}
-
 #services {
   border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  padding-top: 90px;
-  padding-bottom: 90px;
 }
 
 #studioname {
@@ -161,7 +167,7 @@ background-size: 100% 100%;
   border: 1px solid black;
   padding: 20px;
   background-color: #F3E9DE;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #signupbutton {
@@ -192,16 +198,16 @@ background-size: 100% 100%;
 
 #contact {
     background-color: #E5D4C0;
-    border-top: 1px solid black;
 }
 
-.parallax-window {
-    min-height: 300px;
-    background: transparent;
+
+#services {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .service-box-hover:hover {
-   background: #E5D4C0;
+   background: #F1DAE2;
    border-radius: 10px;
    transition: 1s;
 }

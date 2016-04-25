@@ -54,6 +54,11 @@ get '/studiodetails' do
   erb :studiodetails
 end
 
+get '/profile' do
+  # @current_user = User.find_by(username: params[:username])
+  erb :profile
+end
+
 get '/show' do
   @studios = Studio.all
   erb :show
