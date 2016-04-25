@@ -29,30 +29,34 @@
 
 
 
-  
 
-<div id="commentssection" class="col-md-6 text-left">
+
+<div id="commentssection" class="col-md-5 text-left">
 <p id="yogaheader" style="text-align: inherit">All yoga studios:</p>
 
 <% @studios.each do |studio| %>
-  <p id="studioname"><%= studio.name %></p>
-  <p>
+
+  <div class="row" style="margin-left: 20px">
+
+
+    <div id="studio">
+    <p id="studioname"><%= studio.name %></p>
+    <p>
     <form method="get" action="/studios/<%= studio.id %>">
       <% if logged_in? %><button class="btn btn-default" type="submit">More information</button><% end %>
     </form>
   </p>
   <p><%= studio.address %></p>
-  <p id="body"><%= studio.body %></p>
+  <!-- <p id="body"><%= studio.body %></p> -->
   <p><a href="<%= studio.website_url %>" target="_blank">Website</a></p>
   <p><img src="<%= studio.image_url %> " id="studioimages"></p>
-  <p style="border-bottom: 1px dashed black">
 
-<% end %>
+    </div>
+
+    <p></p>
+  <!-- <p style="border-bottom: 1px dashed black"> -->
   </div>
-
-
-  <div id="commentssection2" class="col-md-6 text-left">
-
+<% end %>
   </div>
 
 </body>

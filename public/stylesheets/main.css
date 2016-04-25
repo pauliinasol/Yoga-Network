@@ -71,6 +71,11 @@ background-size: 100% 100%;
   margin-bottom: 10px;
 }
 
+#studio {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+}
 
 #services {
   border-bottom: 1px solid black;
