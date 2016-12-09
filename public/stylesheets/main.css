@@ -1,6 +1,6 @@
 #whole-header {
   border-top: 1px solid black;
-  background-image: url(http://oneseapullzone.oneseabody.netdna-cdn.com/wp-content/uploads/2016/02/Exercise.jpg);
+  background-image: url(../../images/Sonja4.jpg);
 }
 
 #middle {
@@ -71,10 +71,21 @@ background-size: 100% 100%;
   margin-bottom: 10px;
 }
 
+#weather {
+  background-color: white;
+}
+
 #studio {
   background-color: white;
   padding: 20px;
   border: 1px solid black;
+}
+
+#studio2 {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  width: 70%;
 }
 
 #services {
@@ -107,7 +118,7 @@ background-size: 100% 100%;
 #about {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #E5D4C0;
+  background-color: #fdfdfd;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   color: black;
@@ -119,7 +130,7 @@ background-size: 100% 100%;
 }
 
 .container-fluid {
-  background-color: white;
+  background-color: #fdfdfd;
   border-bottom: 1px solid black;
 }
 
@@ -180,7 +191,7 @@ background-size: 100% 100%;
 #button1 {
     border-color: #fff;
     color: #222;
-    background-color: #fff;
+    background-color: #fdfdfd;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -191,7 +202,7 @@ background-size: 100% 100%;
  }
 
 #contact {
-    background-color: #E5D4C0;
+    background-color: #fdfdfd;
     border-top: 1px solid black;
 }
 
@@ -204,4 +215,42 @@ background-size: 100% 100%;
    background: #E5D4C0;
    border-radius: 10px;
    transition: 1s;
+}
+
+.starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('https://reviewthebrew.files.wordpress.com/2013/01/empty-rating-star.png');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('http://www.printable-alphabets.com/wp-content/uploads/2012/12/print-signs-full-star-rating.png');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
 }

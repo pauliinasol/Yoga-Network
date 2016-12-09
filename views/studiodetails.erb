@@ -5,16 +5,40 @@
 
   <div id="yogastudioinfo" class="col-sm-6">
 
+
+
     <div class="col-md-6">
       <p class="headers"><%= @studios.name %>
       <% if logged_in? && @like.nil? %> <form action="/like/<%= @studios.id %>" method="post"><button class="btn btn-default">Add to favourites</button></p></form><% end %>
+
       <p><img width="500px" style="border: 1px solid black" src="<%= @studios.image_url %>"/></p>
       <p style="font-weight: bold"><%= @studios.address %></p>
       <p><a href="<%= @studios.website_url %>" target="_blank">Website</a></p>
-      <p style="width: 500px; text-align: justify"><%= @studios.body %></p>
-    </div>
 
+
+          <% if logged_in? %>
+          <form>
+            <span class="starRating" style="padding-bottom: 10px">
+            <input id="rating5" type="radio" name="rating" value="5">
+            <label for="rating5">5</label>
+            <input id="rating4" type="radio" name="rating" value="4">
+            <label for="rating4">4</label>
+            <input id="rating3" type="radio" name="rating" value="3">
+            <label for="rating3">3</label>
+            <input id="rating2" type="radio" name="rating" value="2">
+            <label for="rating2">2</label>
+            <input id="rating1" type="radio" name="rating" value="1">
+            <label for="rating1">1</label>
+          </span>
+          </form>
+          <% end %>
+
+
+      <p style="width: 500px; text-align: justify; font-size: 1em"><%= @studios.body %></p>
+    </div>
 </div>
+</div>
+
 
 <% if logged_in? %>
 <div id="commentssection" class="col-sm-6 col-sm-offset-6 text-left">

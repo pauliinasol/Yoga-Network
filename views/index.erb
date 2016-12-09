@@ -2,13 +2,13 @@
 
       <header id="whole-header">
           <div class="header-content">
-              <div class="header-content-inner" style="background-color: rgba(0, 0, 0, .5)">
+              <div class="header-content-inner">
 
                   <h1>Yoga Network</h1>
                   <% if logged_in? %>
-                  <hr>
+
                   <p id="welcome">Welcome <%= current_user.username %>   <% end %></p>
-                  <hr>
+
                   <p> Connects you with your favourite yoga studios in Melbourne.</p>
                   <% if !logged_in? %><a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a><% end %>
               </div>
@@ -32,7 +32,7 @@
           </div>
       </section>
 
-      <div class="parallax-window" data-parallax="scroll" data-image-src="http://anandamarga.org.sg/wp-content/uploads/2009/08/Yoga-Studio-Guelph-2.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/images/Sonja1.jpg"></div>
 
 
 
@@ -81,7 +81,7 @@
               </div>
           </section>
 </div>
-      <div class="parallax-window" data-parallax="scroll" data-image-src="http://yoga.ooreka.fr/img/intro/intro-yoga.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/images/Sonja2.jpg"></div>
 
       <section id="contact">
           <div class="container">
