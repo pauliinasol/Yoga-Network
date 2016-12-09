@@ -4,12 +4,12 @@
           <div class="header-content">
               <div class="header-content-inner">
 
-                  <h1>Yoga Network</h1>
+                  <h1 style="padding:10px">Yoga Network</h1>
                   <% if logged_in? %>
 
                   <p id="welcome">Welcome <%= current_user.username %>   <% end %></p>
 
-                  <p> Connects you with your favourite yoga studios in Melbourne.</p>
+                  <p> We want to connect you with your favourite yoga studios in Melbourne.</p>
                   <% if !logged_in? %><a href="/signup" id="button1" class="btn btn-primary btn-xl page-scroll">Join us</a><% end %>
               </div>
           </div>
