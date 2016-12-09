@@ -20,6 +20,10 @@ hr {
     border-width: 3px;
 }
 
+#faceicon:hover {
+  opacity: 0.4;
+}
+
 hr.light {
     border-color: #fff;
 }
@@ -45,9 +49,13 @@ h6 {
         font-family: 'Dosis', sans-serif !important;
 }
 
+h1 {
+  font-size: 50px !important;
+}
+
 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
 }
 
