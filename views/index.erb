@@ -8,9 +8,9 @@
             <p id="facebook">
               <a href=""><img id="faceicon" style="width:80px" src="http://www.clipartkid.com/images/589/facebook-icon-free-cliparts-that-you-can-download-to-you-computer-QpFTWu-clipart.png"></a>
             </p>
-              <div class="header-content-inner">
+              <div class="header-content-inner animated fadeInLeft">
 
-                  <h1 style="padding:10px">Yoga Network</h1>
+                  <h1 style="padding:10px" id="headeranimate">Yoga Network</h1>
                   <% if logged_in? %>
 
                   <p id="welcome">Welcome <%= current_user.username %>   <% end %></p>
@@ -41,15 +41,7 @@
 
 
           <section id="services">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-12 text-center">
-                          <h2 class="section-heading">At Your Service</h2>
 
-                          <hr class="primary">
-                      </div>
-                  </div>
-              </div>
               <div class="container" id="aboutus">
                   <div class="row">
                       <div class="col-lg-3 col-md-6 text-center service-box-hover">
@@ -78,7 +70,7 @@
                           <div class="service-box">
                               <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
                               <h3>Made with Love</h3>
-                              <p class="text-muted">We love yoga too! That's why our passion is so strong.</p>
+                              <p class="text-muted">We love yoga too! That's why we needed this service too.</p>
                           </div>
                       </div>
                   </div>
