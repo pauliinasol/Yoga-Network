@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Melbourne Yoga Network</title>
+  <title>YOGE - Your Virtual Yoga Network</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -52,15 +52,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active navbar-fixed-top"><a href="/index">Home page </a></li>
-        <li id="header-link"><a href="/about">About us</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a class="page-scroll" href="/show">Studios</a></li>
+        <li class="active navbar-fixed-top"><a href="/index" style="font-size: 30px">YOGA NETWORK</a></li>
+        <!-- <li id="header-link"><a href="#contact">About us</a></li> -->
 
-          </ul>
-        </li>
       </ul>
 
 
@@ -74,6 +68,13 @@
 
           </li>
           <li><a href="/profile">Profile</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="page-scroll" href="/show">Studios</a></li>
+
+            </ul>
+          </li>
           <li><a href="/favourites">Favourites</a></li>
 
 
@@ -93,6 +94,25 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(
+        /^\//,
+        '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +
+        ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
 
   <%= yield %>
 </body>
