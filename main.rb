@@ -55,7 +55,7 @@ get '/studiodetails' do
 end
 
 get '/profile' do
-  # @current_user = User.find_by(username: params[:username])
+  @current_user = User.find_by(username: params[:username])
   erb :profile
 end
 
@@ -105,6 +105,7 @@ post '/signup' do
   user.email = params[:email]
   user.homestudio = params[:homestudio]
   user.favourite_yoga = params[:favourite_yoga]
+  user.image_url = params[:image_url]
   user.save
   redirect to '/index'
 end

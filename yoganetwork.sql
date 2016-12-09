@@ -33,11 +33,14 @@ CREATE TABLE users (
   username VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
   homestudio VARCHAR(200),
+  image_url VARCHAR(1000),
   favourite_yoga VARCHAR(400),
+  admin BOOLEAN DEFAULT false,
   password_digest VARCHAR (400) NOT NULL
 );
 
   admin BOOLEAN NOT NULL
+  NOT NULL DEFAULT false,
 
 CREATE TABLE likes (
   id SERIAL4 PRIMARY KEY,
